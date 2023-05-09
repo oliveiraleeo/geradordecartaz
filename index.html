@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+  <!-- ----Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="assets/images/seulogoaqui.png" type="image/x-icon">
+
+  <!--  ---- scripts -----  -->
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script defer src="assets/js/selectsValue.js"></script>
+  <script defer src="assets/js/script.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+
+
+  <!--  ---- css ----  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Cartaz</title>
+</head>
+
+<body>
+
+  <div class="container no-print">
+    <header>
+      <div class="logo">
+        <img src="assets/images/seulogoaqui.png" width="130px" alt="">
+      </div>
+      <h1>Gerador de Cartaz</h1>
+    </header>
+    <main>
+      <form action="">
+        <div class="model-configuration">
+          <div class="title">
+            <h3>Configuração de modelo </h3>
+          </div>
+          <div class="model-configuration--inputs">
+            <div class="input-select">
+              <p>Tipo de papel</p>
+              <div class="dropdown" data-array-name="folhas">
+                <div class="select">
+                  <span>Selecione papel</span>
+                  <div class="arrow">
+                    <i class="ph-bold ph-caret-down"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    <input type="text" placeholder="Search">
+                  </div>
+                  <ul class="menu">
+                    <li>TikTok</li>
+                    <li>Instagram</li>
+                    <li class="active">Twitter</li>
+                    <li>Outros</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="input-select">
+              <p>Selo do Cartaz</p>
+              <div class="dropdown" data-array-name="selos">
+                <div class="select">
+                  <span>Selecione o selo</span>
+                  <div class="arrow">
+                    <i class="ph-bold ph-caret-down"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    <input type="text" placeholder="Search">
+                  </div>
+                  <ul class="menu">
+                    <li>TikTok</li>
+                    <li>Instagram</li>
+                    <li class="active">Twitter</li>
+                    <li>Outros</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="input-select">
+              <p>Tipo de Unidade</p>
+              <div class="dropdown" data-array-name="unidades">
+                <div class="select">
+                  <span>Selecione</span>
+                  <div class="arrow">
+                    <i class="ph-bold ph-caret-down"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    <input type="text" placeholder="Search">
+                  </div>
+                  <ul class="menu">
+                    <li>TikTok</li>
+                    <li>Instagram</li>
+                    <li class="active">Twitter</li>
+                    <li>Outros</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="input-select burden ">
+              <p>Quantidade Fd</p>
+              <input type="number" name="" id="" class="textInput" placeholder="12/6/4">
+            </div>
+
+          </div>
+        </div>
+        <div class="product-configuration">
+          <div class="title">
+            <h3>Informaçoes do produto </h3>
+          </div>
+          <div class="model-configuration--inputs">
+            <div class="input-select">
+              <p>Nome do produto</p>
+              <input type="text" name="" id="title" class="textInput name" placeholder="Coca cola 2lt " maxlength="34">
+            </div>
+            <div class="input-select">
+              <p>Codigo do produto</p>
+              <input type="text" name="" id="" class="textInput cod-input" placeholder="cod:. 29887">
+            </div>
+            <div class="input-select price">
+              <p>Preço</p>
+              <input type="text" name="" id="" class="textInput input-price" placeholder="R$ 19,90">
+            </div>
+            <div class="input-select">
+              <p>Data termino promoção</p>
+              <input type="date" name="" id="" class="textInput validate">
+            </div>
+          </div>
+        </div>
+        <div class="buttons-control">
+          <!--  <div class="button" onclick="pegarValor()">
+            <i class="ph-bold ph-eye"></i>
+            <span>Visualizar</span>
+          </div> -->
+          <div class="button" id="botao-imprimir">
+            <i class="ph-bold ph-printer"></i>
+            <span>Imprimir</span>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div class="folha-01 imprimirC">
+    <div class="f-bg">
+      <div class="f-selo">
+        <img src="assets/images/diadasmaes.png" alt="">
+      </div>
+      <div class="f-title-product">Coca Cola 2 litros Recarregavel</div>
+      <div class="f-price">
+        <div class="f-title--symbol">R$</div>
+        <div class="f-title--before-comma">12</div>
+        <div class="f-title--after-comma">
+          <span>,12</span>
+          <div class="unit">Unidade</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="validity">Valido até 23/03/2023</div>
+        <div class="cod">COD:. 29028</div>
+      </div>
+    </div>
+    <div class="burden-price">
+      <span>Fardo c/12</span>
+      <div class="priceBurden">R$ 12,99</div>
+    </div>
+  </div>
+
+
+  <div class="loading-overlay">
+    <div class="ring"></div>
+    <span>Criando Cartaz...</span>
+  </div>
+
+</body>
+
+
+
+</html>
